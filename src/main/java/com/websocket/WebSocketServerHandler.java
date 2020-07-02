@@ -44,6 +44,7 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
         channels.writeAndFlush(new TextWebSocketFrame(ctx.channel() +"上线了"));
     }
 
+
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
         channels.remove(ctx.channel());
